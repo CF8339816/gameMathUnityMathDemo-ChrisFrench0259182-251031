@@ -673,36 +673,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e9ceff753b5b942921471ff8774dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wood_Chest: 0
-  Bronze_Chest: 0
-  Silver_Chest: 0
-  Gold_Chest: 0
-  Platnum_Chest: 0
-  Wood_Chest_Common: 0
-  Wood_Chest_Uncommon: 0
-  Wood_Chest_Rare: 0
-  Wood_Chest_Epic: 0
-  Wood_Chest_Legendary: 0
-  Bronze_Chest_Common: 0
-  Bronze_Chest_Uncommon: 0
-  Bronze_Chest_Rare: 0
-  Bronze_Chest_Epic: 0
-  Bronze_Chest_Legendary: 0
-  Silver_Chest_Common: 0
-  Silver_Chest_Uncommon: 0
-  Silver_Chest_Rare: 0
-  Silver_Chest_Epic: 0
-  Silver_Chest_Legendary: 0
-  Gold_Chest_Common: 0
-  Gold_Chest_Uncommon: 0
-  Gold_Chest_Rare: 0
-  Gold_Chest_Epic: 0
-  Gold_Chest_Legendary: 0
-  Platinum_Chest_Common: 0
-  Platinum_Chest_Uncommon: 0
-  Platinum_Chest_Rare: 0
-  Platinum_Chest_Epic: 0
-  Platinum_Chest_Legendary: 0
+  Wood_Chest: 57
+  Bronze_Chest: 25
+  Silver_Chest: 11
+  Gold_Chest: 6
+  Platnum_Chest: 1
+  Wood_Chest_Common: 52
+  Wood_Chest_Uncommon: 34
+  Wood_Chest_Rare: 12
+  Wood_Chest_Epic: 3
+  Wood_Chest_Legendary: 1
+  Bronze_Chest_Common: 45
+  Bronze_Chest_Uncommon: 32
+  Bronze_Chest_Rare: 13
+  Bronze_Chest_Epic: 7
+  Bronze_Chest_Legendary: 3
+  Silver_Chest_Common: 40
+  Silver_Chest_Uncommon: 30
+  Silver_Chest_Rare: 15
+  Silver_Chest_Epic: 10
+  Silver_Chest_Legendary: 5
+  Gold_Chest_Common: 30
+  Gold_Chest_Uncommon: 25
+  Gold_Chest_Rare: 25
+  Gold_Chest_Epic: 13
+  Gold_Chest_Legendary: 7
+  Platinum_Chest_Common: 10
+  Platinum_Chest_Uncommon: 15
+  Platinum_Chest_Rare: 40
+  Platinum_Chest_Epic: 20
+  Platinum_Chest_Legendary: 15
 --- !u!114 &2041183882
 MonoBehaviour:
   m_ObjectHideFlags: 0
