@@ -172,23 +172,23 @@ public class mathDemo : MonoBehaviour
         int silverLoot = Random.Range(1, Max + 1);
         if (silverLoot <= Silver_Chest_Legendary)
         {
-            LootSilver.text = "Legendary Loot";
+            LootSilver.text = "Silver Chest, Legendary Loot";
         }
         if (silverLoot <= Silver_Chest_Epic)
         {
-            LootSilver.text = "Epic Loot";
+            LootSilver.text = "Silver Chest, Epic Loot";
         }
         if (silverLoot <= Silver_Chest_Rare)
         {
-            LootSilver.text = "Rare Loot";
+            LootSilver.text = "Silver Chest, Rare Loot";
         }
         if (silverLoot <= Silver_Chest_Uncommon)
         {
-            LootSilver.text = "Uncommon Loot";
+            LootSilver.text = "Silver Chest, Uncommon Loot";
         }
         if (silverLoot <= Silver_Chest_Common)
         {
-            LootSilver.text = "Common Loot";
+            LootSilver.text = "Silver Chest, Common Loot";
         }
 
     }
@@ -200,23 +200,23 @@ public class mathDemo : MonoBehaviour
         int goldLoot = Random.Range(1, Max + 1);
         if (goldLoot <= Gold_Chest_Legendary)
         {
-            LootGold.text = "Legendary Loot";
+            LootGold.text = "Gold Chest, Legendary Loot";
         }
         if (goldLoot <= Gold_Chest_Epic)
         {
-            LootGold.text = "Epic Loot";
+            LootGold.text = "Gold Chest, Epic Loot";
         }
         if (goldLoot <= Gold_Chest_Rare)
         {
-            LootGold.text = "Rare Loot";
+            LootGold.text = "Gold Chest, Rare Loot";
         }
         if (goldLoot <= Gold_Chest_Uncommon)
         {
-            LootGold.text = "Uncommon Loot";
+            LootGold.text = "Gold Chest, Uncommon Loot";
         }
         if (goldLoot <= Gold_Chest_Common)
         {
-            LootGold.text = "Common Loot";
+            LootGold.text = "Gold Chest, Common Loot";
         }
 
     }
@@ -228,23 +228,23 @@ public class mathDemo : MonoBehaviour
         int platinumLoot = Random.Range(1, Max + 1);
         if (platinumLoot <= Platinum_Chest_Legendary)
         {
-            LootPlatinum.text = "Legendary Loot";
+            LootPlatinum.text = "Platinum Chest, Legendary Loot";
         }
         if (platinumLoot <= Platinum_Chest_Epic)
         {
-            LootPlatinum.text = "Epic Loot";
+            LootPlatinum.text = "Platinum Chest, Epic Loot";
         }
         if (platinumLoot <= Platinum_Chest_Rare)
         {
-            LootPlatinum.text = "Rare Loot";
+            LootPlatinum.text = "Platinum Chest, Rare Loot";
         }
         if (platinumLoot <= Platinum_Chest_Uncommon)
         {
-            LootPlatinum.text = "Uncommon Loot";
+            LootPlatinum.text = "Platinum Chest, Uncommon Loot";
         }
         if (platinumLoot <= Platinum_Chest_Common)
         {
-            LootPlatinum.text = "Common Loot";
+            LootPlatinum.text = "Platinum Chest, Common Loot";
         }
 
     }
