@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 
@@ -60,6 +61,26 @@ public class mathDemo : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
+        
+       
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            LootRoll();
+        }
+
+    }
+
+
+    //m0
+    void LootRoll()
+    {
         int Max = Wood_Chest + Bronze_Chest + Silver_Chest + Gold_Chest + Platinum_Chest;
         int whatChest = Random.Range(1, Max + 1);
         if (whatChest <= Platinum_Chest)
@@ -82,19 +103,12 @@ public class mathDemo : MonoBehaviour
         {
             WoodenLoot();
         }
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
-
 
 
     //m1
-    private void WoodenLoot()
+    void WoodenLoot()
     {
 
         int Max = Wood_Chest_Common + Wood_Chest_Uncommon + Wood_Chest_Rare + Wood_Chest_Epic + Wood_Chest_Legendary;
@@ -124,7 +138,7 @@ public class mathDemo : MonoBehaviour
 
 
     //m2
-    private void BronzeLoot()
+    void BronzeLoot()
     {
         int Max = Bronze_Chest_Common + Bronze_Chest_Uncommon + Bronze_Chest_Rare + Bronze_Chest_Epic + Bronze_Chest_Legendary;
         int bronzeLoot = Random.Range(1, Max +1);
@@ -152,7 +166,7 @@ public class mathDemo : MonoBehaviour
     }
 
     //m3
-    private void SilverLoot()
+    void SilverLoot()
     {
         int Max = Silver_Chest_Common + Silver_Chest_Uncommon + Silver_Chest_Rare + Silver_Chest_Epic + Silver_Chest_Legendary;
         int silverLoot = Random.Range(1, Max + 1);
@@ -180,7 +194,7 @@ public class mathDemo : MonoBehaviour
     }
 
     //m4
-    private void GoldLoot()
+    void GoldLoot()
     {
         int Max = Gold_Chest_Common + Gold_Chest_Uncommon + Gold_Chest_Rare + Gold_Chest_Epic + Gold_Chest_Legendary;
         int goldLoot = Random.Range(1, Max + 1);
@@ -208,7 +222,7 @@ public class mathDemo : MonoBehaviour
     }
 
     //m5 
-    private void PlatinumLoot()
+    void PlatinumLoot()
     {
         int Max = Platinum_Chest_Common + Platinum_Chest_Uncommon + Platinum_Chest_Rare + Platinum_Chest_Epic + Platinum_Chest_Legendary;
         int platinumLoot = Random.Range(1, Max + 1);
