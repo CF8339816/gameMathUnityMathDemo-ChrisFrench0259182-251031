@@ -10,7 +10,7 @@ public class mathDemo : MonoBehaviour
     [SerializeField] int Silver_Chest = 0;
     [SerializeField] int Gold_Chest = 0;
     [SerializeField] int Platinum_Chest = 0;
-
+    public TextMeshProUGUI ChestsCount;
 
     [Header("Wooden Chest")]
     [SerializeField] int Wood_Chest_Common = 0;
@@ -103,7 +103,7 @@ public class mathDemo : MonoBehaviour
         {
             WoodenLoot();
         }
-
+        ChestsCount.text = "Wood Chest: {woodCount}, Bronze Chest: {bronzeCount}, Silver Chest: {silverCount}, Gold Chest: {goldCount}, Platinum Chest: {platinumCount} ";
     }
 
 
