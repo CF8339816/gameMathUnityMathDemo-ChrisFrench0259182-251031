@@ -1,60 +1,77 @@
+using System.Collections;
+using System.Collections.Generic;
+
 using System.Runtime.CompilerServices;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class mathDemo : MonoBehaviour
 {
     [Header("Chest Type")]
-    [SerializeField] int Wood_Chest = 0;
-    [SerializeField] int Bronze_Chest = 0;
-    [SerializeField] int Silver_Chest = 0;
-    [SerializeField] int Gold_Chest = 0;
-    [SerializeField] int Platinum_Chest = 0;
+    [SerializeField] int WoodChest = 0;
+    [SerializeField] int BronzeChest = 0;
+    [SerializeField] int SilverChest = 0;
+    [SerializeField] int GoldChest = 0;
+    [SerializeField] int PlatinumChest = 0;
     public TextMeshProUGUI ChestsCount;
+    [SerializeField] int CommonLootCount = 0;
+    [SerializeField] int UncommonLootCount = 0;
+    [SerializeField] int RareLootCount = 0;
+    [SerializeField] int EpicLootCount = 0;
+    [SerializeField] int LegendaryLootCount = 0;
 
     [Header("Wooden Chest")]
-    [SerializeField] int Wood_Chest_Common = 0;
-    [SerializeField] int Wood_Chest_Uncommon = 0;
-    [SerializeField] int Wood_Chest_Rare = 0;
-    [SerializeField] int Wood_Chest_Epic = 0;
-    [SerializeField] int Wood_Chest_Legendary = 0;
+    [SerializeField] int WoodChestCommon = 0;
+    [SerializeField] int WoodChestUncommon = 0;
+    [SerializeField] int WoodChestRare = 0;
+    [SerializeField] int WoodChestEpic = 0;
+    [SerializeField] int WoodChestLegendary = 0;
     public TextMeshProUGUI LootWood;
+    [SerializeField] int WoodenChestCounts = 0;
 
     [Header("Bronze Chest")]
-    [SerializeField] int Bronze_Chest_Common = 0;
-    [SerializeField] int Bronze_Chest_Uncommon = 0;
-    [SerializeField] int Bronze_Chest_Rare = 0;
-    [SerializeField] int Bronze_Chest_Epic = 0;
-    [SerializeField] int Bronze_Chest_Legendary = 0;
+    [SerializeField] int BronzeChestCommon = 0;
+    [SerializeField] int BronzeChestUncommon = 0;
+    [SerializeField] int BronzeChestRare = 0;
+    [SerializeField] int BronzeChestEpic = 0;
+    [SerializeField] int BronzeChestLegendary = 0;
     public TextMeshProUGUI LootBronze;
+    [SerializeField] int BronzeChestCounts = 0;
+
 
     [Header("Silver Chest")]
-    [SerializeField] int Silver_Chest_Common = 0;
-    [SerializeField] int Silver_Chest_Uncommon = 0;
-    [SerializeField] int Silver_Chest_Rare = 0;
-    [SerializeField] int Silver_Chest_Epic = 0;
-    [SerializeField] int Silver_Chest_Legendary = 0;
+    [SerializeField] int SilverChestCommon = 0;
+    [SerializeField] int SilverChestUncommon = 0;
+    [SerializeField] int SilverChestRare = 0;
+    [SerializeField] int SilverChestEpic = 0;
+    [SerializeField] int SilverChestLegendary = 0;
     public TextMeshProUGUI LootSilver;
-
+    [SerializeField] int SilverChestCounts = 0;
 
 
 
     [Header("Gold Chest")]
-    [SerializeField] int Gold_Chest_Common = 0;
-    [SerializeField] int Gold_Chest_Uncommon = 0;
-    [SerializeField] int Gold_Chest_Rare = 0;
-    [SerializeField] int Gold_Chest_Epic = 0;
-    [SerializeField] int Gold_Chest_Legendary = 0;
+    [SerializeField] int GoldChestCommon = 0;
+    [SerializeField] int GoldChestUncommon = 0;
+    [SerializeField] int GoldChestRare = 0;
+    [SerializeField] int GoldChestEpic = 0;
+    [SerializeField] int GoldChestLegendary = 0;
     public TextMeshProUGUI LootGold;
+    [SerializeField] int GoldChestCounts = 0;
+
 
 
     [Header("Platinum Chest")]
-    [SerializeField] int Platinum_Chest_Common = 0;
-    [SerializeField] int Platinum_Chest_Uncommon = 0;
-    [SerializeField] int Platinum_Chest_Rare = 0;
-    [SerializeField] int Platinum_Chest_Epic = 0;
-    [SerializeField] int Platinum_Chest_Legendary = 0;
+    [SerializeField] int PlatinumChestCommon = 0;
+    [SerializeField] int PlatinumChestUncommon = 0;
+    [SerializeField] int PlatinumChestRare = 0;
+    [SerializeField] int PlatinumChestEpic = 0;
+    [SerializeField] int PlatinumChestLegendary = 0;
     public TextMeshProUGUI LootPlatinum;
+    [SerializeField] int PlatinumChestCounts = 0;
+
+
 
     //[SerializeField] int Platinum_Chest_Drops = Platinum.Count{0};
 
@@ -81,29 +98,37 @@ public class mathDemo : MonoBehaviour
     //m0
     void LootRoll()
     {
-        int Max = Wood_Chest + Bronze_Chest + Silver_Chest + Gold_Chest + Platinum_Chest;
+        int Max = WoodChest + BronzeChest + SilverChest + GoldChest + PlatinumChest;
         int whatChest = Random.Range(1, Max + 1);
-        if (whatChest <= Platinum_Chest)
+        if (whatChest <= PlatinumChest)
         {
+            PlatinumChestCounts++;
             PlatinumLoot();
         }
-        if (whatChest <= Gold_Chest)
+        if (whatChest <= GoldChest)
         {
+            GoldChestCounts++;
             GoldLoot();
         }
-        if (whatChest <= Silver_Chest)
+        if (whatChest <= SilverChest)
         {
+            SilverChestCounts++;
            SilverLoot();
         }
-        if (whatChest <= Bronze_Chest)
+        if (whatChest <= BronzeChest)
         {
+            BronzeChestCounts++;
             BronzeLoot();
         }
-        if (whatChest <= Wood_Chest)
+        if (whatChest <= WoodChest)
         {
+            WoodenChestCounts++;
             WoodenLoot();
         }
-        ChestsCount.text = "Wood Chest: {woodCount}, Bronze Chest: {bronzeCount}, Silver Chest: {silverCount}, Gold Chest: {goldCount}, Platinum Chest: {platinumCount} ";
+        ChestsCount.text = "Wood Chest:" + WoodenChestCounts + "   Bronze Chest:" + BronzeChestCounts + "  Silver Chest:" + SilverChestCounts + "   Gold Chest:" + GoldChestCounts + "   Platinum Chest:" + PlatinumChestCounts +"\n"+
+        "Common Loot:" + CommonLootCount + "   Uncommon Loot:" + UncommonLootCount + "   Rare Loot:" + RareLootCount + "   Epic Loot:" + EpicLootCount + "   Legendary Loot" + LegendaryLootCount;
+
+
     }
 
 
@@ -111,55 +136,65 @@ public class mathDemo : MonoBehaviour
     void WoodenLoot()
     {
 
-        int Max = Wood_Chest_Common + Wood_Chest_Uncommon + Wood_Chest_Rare + Wood_Chest_Epic + Wood_Chest_Legendary;
+        int Max = WoodChestCommon + WoodChestUncommon + WoodChestRare + WoodChestEpic + WoodChestLegendary;
         int woodLoot = Random.Range(1, Max + 1);
-        if (woodLoot <= Wood_Chest_Legendary)
+        if (woodLoot <= WoodChestLegendary)
         {
+            LegendaryLootCount++;
             LootWood.text = "Wooden Chest, Legendary Loot";
         }
-        if (woodLoot <= Wood_Chest_Epic)
+        if (woodLoot <= WoodChestEpic)
         {
+            EpicLootCount++;
             LootWood.text = "Wooden Chest, Epic Loot";
         }
-        if (woodLoot <= Wood_Chest_Rare)
+        if (woodLoot <= WoodChestRare)
         {
+            RareLootCount++;
             LootWood.text = "Wooden Chest, Rare Loot";
         }
-        if (woodLoot <= Wood_Chest_Uncommon)
+        if (woodLoot <= WoodChestUncommon)
         {
+            UncommonLootCount++;
             LootWood.text = "Wooden Chest, Uncommon Loot";
         }
-        if (woodLoot <= Wood_Chest_Common)
+        if (woodLoot <= WoodChestCommon)
         {
+            CommonLootCount++;
             LootWood.text = "Wooden Chest, Common Loot";
         }
-
+        
     }
 
 
     //m2
     void BronzeLoot()
     {
-        int Max = Bronze_Chest_Common + Bronze_Chest_Uncommon + Bronze_Chest_Rare + Bronze_Chest_Epic + Bronze_Chest_Legendary;
+        int Max = BronzeChestCommon + BronzeChestUncommon + BronzeChestRare + BronzeChestEpic + BronzeChestLegendary;
         int bronzeLoot = Random.Range(1, Max +1);
-        if (bronzeLoot <= Bronze_Chest_Legendary)
+        if (bronzeLoot <= BronzeChestLegendary)
         {
+            LegendaryLootCount++;
             LootBronze.text = "Bronze Chest, Legendary Loot";
         }
-        if (bronzeLoot <= Bronze_Chest_Epic)
+        if (bronzeLoot <= BronzeChestEpic)
         {
+            EpicLootCount++;
             LootBronze.text = "Bronze Chest, Epic Loot";
         }
-        if (bronzeLoot <= Bronze_Chest_Rare)
+        if (bronzeLoot <= BronzeChestRare)
         {
+            RareLootCount++;
             LootBronze.text = "Bronze Chest, Rare Loot";
         }
-        if (bronzeLoot <= Bronze_Chest_Uncommon)
+        if (bronzeLoot <= BronzeChestUncommon)
         {
+            UncommonLootCount++;
             LootBronze.text = "Bronze Chest, Uncommon Loot";
         }
-        if (bronzeLoot <= Bronze_Chest_Common)
+        if (bronzeLoot <= BronzeChestCommon)
         {
+            CommonLootCount++;
             LootBronze.text = "Bronze Chest, Common Loot";
         }
 
@@ -168,26 +203,31 @@ public class mathDemo : MonoBehaviour
     //m3
     void SilverLoot()
     {
-        int Max = Silver_Chest_Common + Silver_Chest_Uncommon + Silver_Chest_Rare + Silver_Chest_Epic + Silver_Chest_Legendary;
+        int Max = SilverChestCommon + SilverChestUncommon + SilverChestRare + SilverChestEpic + SilverChestLegendary;
         int silverLoot = Random.Range(1, Max + 1);
-        if (silverLoot <= Silver_Chest_Legendary)
+        if (silverLoot <= SilverChestLegendary)
         {
+            LegendaryLootCount++;
             LootSilver.text = "Silver Chest, Legendary Loot";
         }
-        if (silverLoot <= Silver_Chest_Epic)
+        if (silverLoot <= SilverChestEpic)
         {
+            EpicLootCount++;
             LootSilver.text = "Silver Chest, Epic Loot";
         }
-        if (silverLoot <= Silver_Chest_Rare)
+        if (silverLoot <= SilverChestRare)
         {
+            RareLootCount++;
             LootSilver.text = "Silver Chest, Rare Loot";
         }
-        if (silverLoot <= Silver_Chest_Uncommon)
+        if (silverLoot <= SilverChestUncommon)
         {
+            UncommonLootCount++;
             LootSilver.text = "Silver Chest, Uncommon Loot";
         }
-        if (silverLoot <= Silver_Chest_Common)
+        if (silverLoot <= SilverChestCommon)
         {
+            CommonLootCount++;
             LootSilver.text = "Silver Chest, Common Loot";
         }
 
@@ -196,26 +236,31 @@ public class mathDemo : MonoBehaviour
     //m4
     void GoldLoot()
     {
-        int Max = Gold_Chest_Common + Gold_Chest_Uncommon + Gold_Chest_Rare + Gold_Chest_Epic + Gold_Chest_Legendary;
+        int Max = GoldChestCommon + GoldChestUncommon + GoldChestRare + GoldChestEpic + GoldChestLegendary;
         int goldLoot = Random.Range(1, Max + 1);
-        if (goldLoot <= Gold_Chest_Legendary)
+        if (goldLoot <= GoldChestLegendary)
         {
+            LegendaryLootCount++;
             LootGold.text = "Gold Chest, Legendary Loot";
         }
-        if (goldLoot <= Gold_Chest_Epic)
+        if (goldLoot <= GoldChestEpic)
         {
+            EpicLootCount++;
             LootGold.text = "Gold Chest, Epic Loot";
         }
-        if (goldLoot <= Gold_Chest_Rare)
+        if (goldLoot <= GoldChestRare)
         {
+            RareLootCount++;
             LootGold.text = "Gold Chest, Rare Loot";
         }
-        if (goldLoot <= Gold_Chest_Uncommon)
+        if (goldLoot <= GoldChestUncommon)
         {
+            UncommonLootCount++;
             LootGold.text = "Gold Chest, Uncommon Loot";
         }
-        if (goldLoot <= Gold_Chest_Common)
+        if (goldLoot <= GoldChestCommon)
         {
+            CommonLootCount++;
             LootGold.text = "Gold Chest, Common Loot";
         }
 
@@ -224,26 +269,31 @@ public class mathDemo : MonoBehaviour
     //m5 
     void PlatinumLoot()
     {
-        int Max = Platinum_Chest_Common + Platinum_Chest_Uncommon + Platinum_Chest_Rare + Platinum_Chest_Epic + Platinum_Chest_Legendary;
+        int Max = PlatinumChestCommon + PlatinumChestUncommon + PlatinumChestRare + PlatinumChestEpic + PlatinumChestLegendary;
         int platinumLoot = Random.Range(1, Max + 1);
-        if (platinumLoot <= Platinum_Chest_Legendary)
+        if (platinumLoot <= PlatinumChestLegendary)
         {
+            LegendaryLootCount++;
             LootPlatinum.text = "Platinum Chest, Legendary Loot";
         }
-        if (platinumLoot <= Platinum_Chest_Epic)
+        if (platinumLoot <= PlatinumChestEpic)
         {
+            EpicLootCount++;
             LootPlatinum.text = "Platinum Chest, Epic Loot";
         }
-        if (platinumLoot <= Platinum_Chest_Rare)
+        if (platinumLoot <= PlatinumChestRare)
         {
+            RareLootCount++;
             LootPlatinum.text = "Platinum Chest, Rare Loot";
         }
-        if (platinumLoot <= Platinum_Chest_Uncommon)
+        if (platinumLoot <= PlatinumChestUncommon)
         {
+            UncommonLootCount++;
             LootPlatinum.text = "Platinum Chest, Uncommon Loot";
         }
-        if (platinumLoot <= Platinum_Chest_Common)
+        if (platinumLoot <= PlatinumChestCommon)
         {
+            CommonLootCount++;
             LootPlatinum.text = "Platinum Chest, Common Loot";
         }
 
